@@ -572,7 +572,7 @@ class App extends React.Component {
   onButtonSubmit = (event) => {
     event.preventDefault();
     this.setState({ imageURL: this.state.input });
-    fetch('https://git.heroku.com/infinite-bayou-43893.git/imageurl', {
+    fetch('https://infinite-bayou-43893.herokuapp.com/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -582,7 +582,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://git.heroku.com/infinite-bayou-43893.git/image', {
+          fetch('https://infinite-bayou-43893.herokuapp.com/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

@@ -21,7 +21,7 @@ class Signin extends React.Component {
 
 	onSubmitSignIn = (event) => {
 		event.preventDefault();
-		fetch('https://git.heroku.com/infinite-bayou-43893.git/signin', {
+		fetch('https://infinite-bayou-43893.herokuapp.com/signin', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({

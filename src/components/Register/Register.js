@@ -26,7 +26,7 @@ class Register extends React.Component {
 
 	onSubmitSignIn = (event) => {
 		event.preventDefault()
-		fetch('https://git.heroku.com/infinite-bayou-43893.git/register', {
+		fetch('https://infinite-bayou-43893.herokuapp.com/register', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
